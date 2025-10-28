@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Signup Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+   
+    (function() {
+      emailjs.init('LzheRUYvKaScet9mP'); 
+    })();
+  </script>
+</head>
+<body>
+  <div class="container" id="formContainer">
+    <form id="signupForm">
+      <h2>Sign Up</h2>
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+      <button type="button" class="toggle-btn" id="toLogin">Already have an account? Login</button>
+    </form>
+
+
+    <form id="loginForm" class="hidden">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <button type="button" class="toggle-btn" id="toSignup">Don't have an account? Signup</button>
+    </form>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>
